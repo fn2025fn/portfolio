@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortFolio - Fukunari Natsumi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>福成 菜摘 Fukunari Natsumi</h1>
+  </header>
+
+  <section class="intoroduction">
+    <h2>自己紹介</h2>
+    <p>
+      前職では医療事務として勤務していましたが、産休中にコーディングに出会い、<br />
+      「自分の書いたコードが画面に表現される楽しさ」と「それが多くの人に情報として届くこと」に魅力を感じました。<br />
+      子育てが落ち着いたタイミングで本格的に学びたい気持ちが高まり、TechCampを受講。<br />
+      学習を進める中で、エラーを乗り越えた時の達成感や、機能が完成するたびの喜びが大きなモチベーションになっています。<br />
+      今後は、ユーザーにとって使いやすく、伝わるものをつくれるエンジニアとしてキャリアを築いていきたいと考えています。
+    </p>
+  </section>
+
+  <section class="fade-in-section">
+    <h2>制作実績</h2>
+  <div class="card">
+    <img src="image/taski-app.png" alt="お手伝いアプリのサムネイル">
+    <div class="card-content">
+      <h3>オリジナルアプリ：お手伝い管理アプリ</h3>
+      <p>
+        Ruby on Rails / PostgreSQL / Devise / JavaScript<br />
+        お手伝いの記録、ごほうびポイントの自動集計、写真ログ、進捗グラフ表示機能を備えた親子向けアプリです。
+      </p>
+      <div class="link">
+      <a href="https://tetsumemo.onrender.com" target="_blank" class="btn">アプリを見る</a>
+    </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="fade-in-section">
+  <div class="text-project">
+    <h3>クライアント案件：Webページコーディング</h3>
+    <ul>
+      <li>デザイン支給のもとHTML / CSS / JavaScriptでコーディングを担当</li>
+      <li>レスポンシブ対応、GA / サーチコンソール導入</li>
+      <li>多言語対応（日本語・英語・フランス語）</li>
+      <li>担当ページ：教室紹介、会社案内、製品紹介、社員紹介（複数名）、インタビュー、飲食製品案内</li>
+    </ul>
+    <div class="link">
+      <p>公開中の実績サイト：</p>
+      <a href="https://kotobuki-kaikei.co.jp/" target="_blank">https://kotobuki-kaikei.co.jp/</a>
+    </div>
+  </div>
+  </section>
+
+  <section class="fade-in-section">
+    <h2>スキル</h2>
+    <ul>
+      <li>HTML / CSS / JavaScript</li>
+      <li>Ruby on Rails / PostgreSQL</li>
+      <li>WordPress / ACF / カスタム投稿タイプ</li>
+      <li>Google Analytics / Search Console（導入経験あり）</li>
+      <li>Git / GitHub / GitHub Pages</li>
+    </ul>
+  </section>
+  <footer>
+    <p class="info">お問い合わせ：usui.fn.2024@gmail.com</p>
+    <p class="info">GitHub：<a href="https://github.com/fn2025fn
+      " target="_blank">https://github.com/fn2025fn
+    </a></p>
+    <p class="info">© 2025 fukunari natsumi</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInSections = document.querySelectorAll('.fade-in-section');
+  
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); 
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+  
+      fadeInSections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+  
+</body>
+</html>
